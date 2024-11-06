@@ -1,0 +1,50 @@
+ <div class="container"> 
+    <div  class="row"> 
+
+      <div *ngFor="let categorie of categories; index as i; first as isFirst; last as islast" class="col-md-4" style="margin-bottom: 20px;"> 
+        <img (click)="alertDescription(categorie.description)" [src]="categorie.image" [alt]="categorie.title" class="img-fluid h-50 w-75"> 
+        <h3>{{categories[i].title|uppercase}}</h3> 
+        <a [routerLink]="['/products/categories',categorie.id]"  ><button *ngIf="categorie.available" class="btn btn-primary">Voir produits</button></a> 
+        <h6 *ngIf="!categorie.available">Catégorie non disponible</h6> 
+      </div> 
+    
+    
+      <!-- <div class="col-md-4" style="margin-bottom: 20px;"> 
+        <img (click)="alertDescription(categories[1].description)" [src]="categories[1].image" alt="Petit 
+  électroménager" class="img-fluid h-50 w-75"> 
+        <h3>{{categories[1].title|uppercase}}</h3> 
+        <button *ngIf="categories[1].available" class="btn btn-primary">Voir produits</button> 
+        <h6 *ngIf="!categories[1].available">Catégorie non disponible</h6> 
+      </div>
+      <div class="col-md-4" style="margin-bottom: 20px;"> 
+        <img (click)="alertDescription(categories[2].description)" [src]="categories[2].image"
+        alt="Produits informatiques" class="img-fluid h-50 w-75"> 
+        <h3>{{categories[2].title|uppercase}}</h3> 
+        <button *ngIf="categories[2].available" class="btn btn-primary">Voir produits</button> 
+        <h6 *ngIf="!categories[2].available">Catégorie non disponible</h6> 
+  
+      </div> 
+        <div class="col-md-4" style="margin-bottom: 20px;"> 
+        <img (click)="alertDescription(categories[3].description)" [src]="categories[3].image" alt="Smart Phones" 
+        class="img-fluid h-50 w-75"> 
+        <h3>{{categories[3].title|uppercase}}</h3> 
+        <button *ngIf="categories[3].available" class="btn btn-primary">Voir produits</button> 
+        <h6 *ngIf="!categories[3].available">Catégorie non disponible</h6> 
+      </div> 
+        <div class="col-md-4" style="margin-bottom: 20px;"> 
+        <img (click)="alertDescription(categories[4].description)" [src]="categories[4].image" alt="TV, images et 
+        son" class="img-fluid h-50 w-75"> 
+        <h3>{{categories[4].title|uppercase}}</h3> 
+        <button *ngIf="categories[4].available" class="btn btn-primary">Voir produits</button> 
+        <h6 *ngIf="!categories[4].available">Catégorie non disponible</h6> 
+      </div> 
+        <div class="col-md-4" style="margin-bottom: 20px;"> 
+        <img (click)="alertDescription(categories[5].description)" [src]="categories[5].image" alt="Produits voitures" 
+        class="img-fluid h-50 w-75"> 
+        <h3>{{categories[5].title|uppercase}}</h3> 
+        <button  *ngIf="categories[5].available" class="btn btn-primary">Voir produits</button> 
+        <h6 *ngIf="!categories[5].available">Catégorie non disponible</h6> 
+
+      </div>  -->
+        </div> 
+        </div> 
